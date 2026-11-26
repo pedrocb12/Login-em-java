@@ -38,6 +38,10 @@ public class LoginView extends JFrame {
         JPanel botoes = new JPanel();
         botoes.add(btnEntrar);
         botoes.add(btnCadastrar);
+        Color fundo = new Color(35, 10, 194); 
+        getContentPane().setBackground(fundo);
+        campos.setBackground(fundo);
+        botoes.setBackground(fundo);
         lblStatus.setForeground(Color.DARK_GRAY);
         add(campos, BorderLayout.CENTER);
         add(botoes, BorderLayout.SOUTH);

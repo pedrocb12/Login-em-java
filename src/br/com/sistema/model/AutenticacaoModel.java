@@ -52,7 +52,7 @@ public class AutenticacaoModel {
             byte[] hashEsperado = Base64.getDecoder().decode(partes[3]);
             byte[] hashRecebido = derivarHash(senha, salt, iteracoes);
             return MessageDigest.isEqual(hashEsperado, hashRecebido);
-        } catch (IllegalArgumentException | GeneralSecurityException e) {
+        } catch (IllegalArgumentException e) {
             return false;
         }
     }
